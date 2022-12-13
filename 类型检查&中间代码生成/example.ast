@@ -1,0 +1,17 @@
+program
+    FunctionDefine function name: @func, type: i32()
+        Id	name: @a	scope: 0	type: i32
+        Id	name: @b	scope: 0	type: i32
+        Id	name: @c	scope: 0	type: i32
+        CompoundStmt
+            ReturnStmt
+                BinaryExpr	op: add
+                    BinaryExpr	op: add
+                        Id	name: @a	scope: 0	type: i32
+                        Id	name: @b	scope: 0	type: i32
+                    Id	name: @c	scope: 0	type: i32
+    FunctionDefine function name: @main, type: i32()
+        CompoundStmt
+            ReturnStmt
+                FunctionExpr function name: @func, type: i32()
+                        IntegerLiteral	value: 1	type: i32
